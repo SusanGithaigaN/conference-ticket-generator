@@ -3,17 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TanStack Router</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Conference ticket generator</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
-      html {
-        color-scheme: light dark;
-      }
-      * {
-        @apply border-gray-200 dark:border-gray-800;
-      }
-      body {
-        @apply bg-gray-50 text-gray-950 dark:bg-gray-900 dark:text-gray-200;
+      @layer utilities {
+        .bg-img {
+          background-image: url("./src/assets/images/background-desktop.png");
+        }
+        .line-top {
+          background-image: url("./src/assets/images/pattern-squiggly-line-top.svg");
+        }
+        .line-bottom {
+          background-image: url("./src/assets/images/pattern-squiggly-line-bottom.svg");
+        }
+        .gradientPink {
+          background-image: linear-gradient(
+            to right,
+            hsl(7, 86%, 67%),
+            hsl(0, 0%, 100%)
+          );
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+        }
+        .accentPink {
+          color: hsl(7, 86%, 67%);
+        }
       }
     </style>
   </head>
