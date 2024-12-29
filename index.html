@@ -12,6 +12,9 @@
     <title>Frontend Mentor | Conference ticket generator</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
       @layer utilities {
         .bg-img {
           background-image: url("./src/assets/images/background-desktop.png");
@@ -34,6 +37,21 @@
         }
         .accentPink {
           color: hsl(7, 86%, 67%);
+        }
+        .darkOrange {
+          background-color: hsl(7, 71%, 60%);
+        }
+        .bgNeutral {
+          color: hsl(252, 6%, 83%);
+        }
+        .bgLight {
+          background-color: hsl(245, 15%, 58%);
+        }
+        .bgDark {
+          color: hsl(245, 19%, 35%);
+        }
+        .bgDarker {
+          color: hsl(248, 70%, 10%);
         }
       }
     </style>
