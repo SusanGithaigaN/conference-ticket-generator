@@ -11,17 +11,10 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as FormImport } from './routes/form'
 import { Route as CongratsImport } from './routes/congrats'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
-
-const FormRoute = FormImport.update({
-  id: '/form',
-  path: '/form',
-  getParentRoute: () => rootRoute,
-} as any)
 
 const CongratsRoute = CongratsImport.update({
   id: '/congrats',
@@ -53,13 +46,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CongratsImport
       parentRoute: typeof rootRoute
     }
-    '/form': {
-      id: '/form'
-      path: '/form'
-      fullPath: '/form'
-      preLoaderRoute: typeof FormImport
-      parentRoute: typeof rootRoute
-    }
   }
 }
 
@@ -68,41 +54,36 @@ declare module '@tanstack/react-router' {
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/congrats': typeof CongratsRoute
-  '/form': typeof FormRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/congrats': typeof CongratsRoute
-  '/form': typeof FormRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
   '/congrats': typeof CongratsRoute
-  '/form': typeof FormRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/congrats' | '/form'
+  fullPaths: '/' | '/congrats'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/congrats' | '/form'
-  id: '__root__' | '/' | '/congrats' | '/form'
+  to: '/' | '/congrats'
+  id: '__root__' | '/' | '/congrats'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CongratsRoute: typeof CongratsRoute
-  FormRoute: typeof FormRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CongratsRoute: CongratsRoute,
-  FormRoute: FormRoute,
 }
 
 export const routeTree = rootRoute
@@ -116,8 +97,7 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/congrats",
-        "/form"
+        "/congrats"
       ]
     },
     "/": {
@@ -125,9 +105,6 @@ export const routeTree = rootRoute
     },
     "/congrats": {
       "filePath": "congrats.tsx"
-    },
-    "/form": {
-      "filePath": "form.tsx"
     }
   }
 }
