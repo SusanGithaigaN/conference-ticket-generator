@@ -70,7 +70,7 @@ function RouteComponent() {
                 </div>
             </div>
             {/* Attribution */}
-            <div className="attribution text-gray-400 text-sm pt-12 flex flex-row justify-center">
+            <div className="attribution text-gray-400 text-sm pt-12 flex flex-row justify-center pb-6">
                 Challenge by <a href="https://www.frontendmentor.io?ref=challenge" className='pl-1.5 accentPink'>Frontend Mentor</a>.
                 Coded by <a href="https://github.com/SusanGithaigaN"> <span className='pl-1.5 accentPink'>Susan Githaiga</span></a>.
             </div>

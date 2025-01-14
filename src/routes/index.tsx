@@ -64,7 +64,7 @@ function HomeComponent() {
   };
 
   return (
-    <div className='h-full line-top bg-no-repeat bg-right-top h-fit'>
+    <div className='line-top bg-no-repeat bg-right-top h-full'>
       <div className="p-4 text-center">
         <div className="flex flex-row justify-center py-8">
           <img className='img-fluid w-64 h-auto' alt='logo' src={logo} />

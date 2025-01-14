@@ -9,7 +9,7 @@ export const Route = createRootRoute({
 function RootComponent() {
   return (
     <>
-      <div className="bg-img h-screen overflow-y-hidden">
+      <div className="bg-img h-auto pb-6">
         <div className="line-bottom bg-no-repeat bg-left-bottom">
           <Outlet />
           <TanStackRouterDevtools position="bottom-right" />
