@@ -64,7 +64,7 @@ function HomeComponent() {
   };
 
   return (
-    <div className='h-full line-top bg-no-repeat bg-right-top'>
+    <div className='h-full line-top bg-no-repeat bg-right-top h-fit'>
       <div className="p-4 text-center">
         <div className="flex flex-row justify-center py-8">
           <img className='img-fluid w-64 h-auto' alt='logo' src={logo} />
@@ -80,10 +80,10 @@ function HomeComponent() {
       {/* form */}
       <div className='flex flex-row justify-center'>
         <form onSubmit={handleSubmit}>
-          <div className="space-y-12 p-4 text-white">
+          <div className="space-y-8 p-4 text-white">
             <div className="avatar">
               {/* Photo avatar label */}
-              <label htmlFor="cover-photo" className="block text-md font-medium text-gray-300 py-4">
+              <label htmlFor="cover-photo" className="block text-md font-medium text-gray-300 py-2">
                 Upload Avatar
               </label>
 
@@ -204,7 +204,7 @@ function HomeComponent() {
         </form>
       </div>
       {/* Attribution */}
-      <div className="attribution text-gray-400 text-sm mt-10 flex flex-row justify-center">
+      <div className="attribution text-gray-400 text-sm flex flex-row justify-center">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" className='pl-1.5 accentPink'>Frontend Mentor</a>.
         Coded by <a href="https://github.com/SusanGithaigaN"> <span className='pl-1.5 accentPink'>Susan Githaiga</span></a>.
       </div>
